@@ -1,0 +1,15 @@
+ #!/bin/env "/usr/local/bin/python3"
+import requests
+import json
+ 
+import os
+from datetime import date
+
+
+
+def do_get(id):
+    #notice you need to change the below line 
+    r = requests.get('https://some_url/'+id, auth=('some_user', 'some_password'), verify=False)
+    print(r.text)
+
+do_get("some_value")
